@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="./vendors/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="./scripts/client.js"></script>
+    <link rel="stylesheet" href="./vendors/bootstrap.css">
     <link rel="stylesheet" href="./scripts/style.css">
 
     <title>JQuery Salary Calculator</title>
@@ -13,7 +14,7 @@
     <header>
         <h1> Salary Calculator</h1>
     </header>
-    <div id="employeeSection">
+    <div id="inputDiv">
         <h3>Add Employee</h3>
             <div id="employeeForm">
                 <input id="firstNameInput" placeholder="First Name"></input>
@@ -28,15 +29,16 @@
         <h3>Employees</h3>
             <table>
                 <thead>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>ID</th>
-                    <th>Title</th>
-                    <th>Annual Salary</th>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>Annual Salary</th>
+                    </tr>
                     <!-- <button>Delete</button> Create employee delete button  -->
                 </thead>
             </table>
-
     </div> <!-- End empTable --> 
     
 </body>
