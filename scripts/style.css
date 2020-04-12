@@ -4,21 +4,33 @@
 
 // */
 
+body{
+    margin: 15px;
+}
+
+.jumbotron{
+    text-align: center;
+  border-style: double;
+  background-color: rgb(152, 166, 197);
+}
 
 #firstNameInput:hover{
-    background-color: cadetblue;
+    background-color: rgb(238, 240, 114);
 }
 #lastNameInput:hover{
-    background-color: cadetblue;
+    background-color:  rgb(238, 240, 114);
 }
 #idInput:hover{
-    background-color: cadetblue;
+    background-color:  rgb(238, 240, 114);
 }
 #titleInput:hover{
-    background-color: cadetblue;
+    background-color:  rgb(238, 240, 114);
 }
 #salaryInput:hover{
-    background-color: cadetblue;
+    background-color:  rgb(238, 240, 114);
+}
+#submitEmpBtn:hover{
+    background-color: rgb(235, 126, 62);
 }
 
 #monthlyBudget{
@@ -26,5 +38,13 @@
 }
 
 .red{
-    color: crimson;
+    color: rgb(221, 22, 62);
+}
+
+.tHeadColor{
+    background-color: rgb(116, 137, 187);
+}
+
+.textColor{
+    color: rgb(4, 3, 19);
 }

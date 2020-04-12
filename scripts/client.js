@@ -71,6 +71,7 @@ function addEmployee(){
             //do this thing
             console.log( 'over budget!' );
             $(monthlyBudget).html(`<p> Over Monthly Budget: $${totalMonthly} </p>` ).addClass('red');
+            alert("You are over the total monthly budget, please revise. Thank you.");
         } else {
             //do this thing
             console.log( 'within budget!' );
