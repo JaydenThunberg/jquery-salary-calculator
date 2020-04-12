@@ -17,11 +17,11 @@
     <div id="inputDiv">
         <h3>Add Employee</h3>
             <div id="employeeForm">
-                <input id="firstNameInput" placeholder="First Name"></input>
-                <input id="lastNameInput" placeholder="Last Name"></input>
-                <input id="idInput" placeholder="ID "></input>
-                <input id="titleInput" placeholder="Title"></input>
-                <input id="salaryInput" placeholder="Annual Salary"></input>
+                <input type="text" id="firstNameInput" placeholder="First Name"></input>
+                <input type="text" id="lastNameInput" placeholder="Last Name"></input>
+                <input type="text" id="idInput" placeholder="ID "></input>
+                <input type="text" id="titleInput" placeholder="Title"></input>
+                <input type="number" id="salaryInput" placeholder="Annual Salary"></input>
                 <button id="submitEmpBtn">Submit</button>
             </div>  <!-- End employeeForm -->
     </div> <!-- End employeeSection --> 
@@ -32,20 +32,41 @@
             <thead class="thead-light">
               <tr>
                 <th scope="col">First Name</th>
-                <th scope="col">Last Nme</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
-                <th scope="col">Handle</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">ID</th>
+                <th scope="col">Title</th>
+                <th scope="col">Salary</th>
                 <th scope="col"></th>
               </tr>
             </thead>
             <tbody id="tableBody">
+
               <tr>
-                <th scope="row">1</th>
-        
+                <td scope="col">Jayden</td>
+                <td scope="col">Thunberg</td>
+                <td scope="col">12345</td>
+                <td scope="col">Manager</td>
+                <td scope="col">50000</td>
+                <td scope="col"></td>
               </tr>
+              <tr>
+                <td scope="col">Sarah</td>
+                <td scope="col">Preese</td>
+                <td scope="col">67890</td>
+                <td scope="col">Baker</td>
+                <td scope="col">50000</td>
+                <td scope="col"></td>
+              </tr>
+
+              <tr>
+                <th scope="row"></th>
+              </tr>
+
+
             </tbody>
           </table>
+          <div id="monthlyBudget">Total Monthly: $<span id="monthlySpan"></span> </div>
+        
         
     </div> <!-- End empTable --> 
     

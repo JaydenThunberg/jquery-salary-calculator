@@ -1,6 +1,7 @@
 console.log('js');
 
 $(document).ready(readyCalculator)
+
 let employees=[];
     
 function readyCalculator () {
@@ -40,11 +41,13 @@ function addEmployee(){
   }//end addEmployee
 
   function displayEmpTable(){
-   console.log( 'in displayEmpTable', employees );
+//    console.log( 'in displayEmpTable', employees );
     // target output ul by ID
     let el = $( '#tableBody' );
     // empty ul
     el.empty();
+
+    let totalMonthly = 0;
     // loop through employees
     for( let i=0; i<employees.length; i++){
         // append each item to ul
@@ -58,12 +61,28 @@ function addEmployee(){
             <td> <button class="deleteButton">Delete</button> </td>
             </tr>`
         ) //end append
-    } // end employee for loop
+        //for every employee added/ add their salary to the total
+        //return total monthly
+        totalMonthly += parseInt(employees[ i ].empSalary /12)
+        console.log(totalMonthly);
+        $('#monthlySpan').empty().append(totalMonthly);
+        // highlight/alert if over $20,000
+        if(totalMonthly > 20000 ) {
+            //do this thing
+            console.log( 'over budget!' );
+            $(monthlyBudget).html(`<p> Over Monthly Budget: $${totalMonthly} </p>` ).addClass('red');
+        } else {
+            //do this thing
+            console.log( 'within budget!' );
+        } // end if totalMonthly
+    } // end for loop employees
     // delete button
     $('.deleteButton').on('click', deleteEmpBtn)
-}; // displayInventory
+}; // displayEmpTable
 
 function deleteEmpBtn() {
     console.log('in delete button')
-    // let el = 
+    //delete line
+    $(this).parent().parent().remove();
 }; // end deleteEmpBtn
+

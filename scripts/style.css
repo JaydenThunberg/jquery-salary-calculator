@@ -4,3 +4,27 @@
 
 // */
 
+
+#firstNameInput:hover{
+    background-color: cadetblue;
+}
+#lastNameInput:hover{
+    background-color: cadetblue;
+}
+#idInput:hover{
+    background-color: cadetblue;
+}
+#titleInput:hover{
+    background-color: cadetblue;
+}
+#salaryInput:hover{
+    background-color: cadetblue;
+}
+
+#monthlyBudget{
+    text-align: right;
+}
+
+.red{
+    color: crimson;
+}
