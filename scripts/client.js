@@ -6,14 +6,13 @@ let employees=[];
     
 function readyCalculator () {
     console.log('jQ')
+    //submit button append employee to dom
     $('#submitEmpBtn').on('click', addEmployee)
     // $('.deleteButton').on('click', deleteEmpBtn)
 };
 
-//submit button append employee to dom
 function addEmployee(){
     //get user input & place in an object
-    //push object in employees array
     let empToAdd = {
         empFirst: $( '#firstNameInput' ).val(),
         empLast: $( '#lastNameInput' ).val(),
@@ -42,15 +41,14 @@ function addEmployee(){
 
   function displayEmpTable(){
 //    console.log( 'in displayEmpTable', employees );
-    // target output ul by ID
     let el = $( '#tableBody' );
-    // empty ul
+    // empty tr
     el.empty();
 
     let totalMonthly = 0;
     // loop through employees
     for( let i=0; i<employees.length; i++){
-        // append each item to ul
+        // append each object to table
         el.append(
             `<tr>
             <td>${ employees[ i ].empFirst }</td>
@@ -58,15 +56,16 @@ function addEmployee(){
             <td>${ employees[ i ].empId}</td>
             <td>${ employees[ i ].empTitle}</td>
             <td>${ employees[ i ].empSalary}</td>
-            <td> <button class="deleteButton">Delete</button> </td>
+            <td> <button class="deleteButton">Delete</button> </td> 
             </tr>`
         ) //end append
         //for every employee added/ add their salary to the total
         //return total monthly
-        totalMonthly += parseInt(employees[ i ].empSalary /12)
+        totalMonthly += parseInt(employees[ i ].empSalary)
         console.log(totalMonthly);
-        $('#monthlySpan').empty().append(totalMonthly);
-        // highlight/alert if over $20,000
+        $('#monthlySpan').text(totalMonthly /12);
+        // $('#monthlySpan').empty().append(totalMonthly); // this works but .text is the better replacement
+        // red color/alert if over $20,000
         if(totalMonthly > 20000 ) {
             //do this thing
             console.log( 'over budget!' );
@@ -83,7 +82,7 @@ function addEmployee(){
 
 function deleteEmpBtn() {
     console.log('in delete button')
-    //delete line
+    //delete line 
     $(this).parent().parent().remove();
 }; // end deleteEmpBtn
 
