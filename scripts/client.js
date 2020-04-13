@@ -61,10 +61,10 @@ function addEmployee(){
         ) //end append
         //for every employee added/ add their salary to the total
         //return total monthly
-        totalMonthly += parseInt(employees[ i ].empSalary)
+        totalMonthly += parseInt(employees[ i ].empSalary /12)
         console.log(totalMonthly);
-        $('#monthlySpan').text(totalMonthly /12);
-        // $('#monthlySpan').empty().append(totalMonthly); // this works but .text is the better replacement
+        // $('#monthlySpan').text(totalMonthly /12);
+       $('#monthlySpan').empty().append(totalMonthly);
         // red color/alert if over $20,000
         if(totalMonthly > 20000 ) {
             //do this thing
